@@ -1,0 +1,556 @@
+import turtle as trtl
+import random as rand
+wall = trtl.Turtle()
+run = trtl.Turtle()
+wn = trtl.Screen()
+# Set up wall drawing
+run.hideturtle()
+wall.penup()
+wall.goto(200,200)
+wall.pensize(5)
+wall.pencolor("black")
+wall.pendown()
+wall.right(90)
+wall.forward(400)
+
+# Variables
+wallnum = 25
+pathwidth = 30
+n = 0
+
+wall.speed(0)
+
+# Drawing the walls
+while (n <= 21):
+    wall.right(90)
+    wall.forward(400-15*n)
+    n = n + 1
+wall.hideturtle()
+
+# Set up for first barrier
+
+count = 0
+wall.pencolor("brown")
+wall.penup()
+wall.goto(-20,5)
+wall.pendown()
+'''
+# Barriers function
+def barriers():
+    global count
+    count = 0
+    while (count < 6):
+        wall.forward(pathwidth)
+        wall.left(90)
+        wall.penup()
+        wall.forward(pathwidth)
+        wall.pendown()
+        wall.right(90)
+        count = count + 1
+barriers()
+
+wall.setheading(180)
+wall.penup()
+wall.goto(-20,5)
+wall.pendown()
+barriers()
+
+wall.setheading(270)
+wall.penup()
+wall.goto(-20,-20)
+wall.pendown()
+barriers()
+
+wall.setheading(0)
+wall.penup()
+wall.goto(20,5)
+wall.pendown()
+barriers()
+
+# End making barriers
+
+# Doors
+wall.pencolor("white")
+wall.penup()
+wall.goto(-10,5 + pathwidth)
+wall.pendown()
+barriers()
+
+wall.penup()
+wall.goto(-50,5)
+wall.setheading(90)
+wall.pendown()
+barriers()
+
+wall.penup()
+wall.goto(-20,-50)
+wall.setheading(180)
+wall.pendown()
+barriers()
+
+wall.penup()
+wall.goto(50,-20)
+wall.setheading(270)
+wall.pendown()
+barriers()
+'''
+# End making doors
+
+# Barrier Wall
+'''wall.pencolor("green")
+wall.penup()
+wall.goto(-10, 5 + pathwidth)
+wall.setheading(0)
+wall.forward(60)
+wall.pendown()
+wall.left(90)
+wall.forward(pathwidth*2)
+wall.back(pathwidth*2)
+wall.right(90)'''
+
+# Randomizing doors and walls
+wall.pencolor("black")
+wall.pendown()
+wall1x = 170
+wall1y = rand.randint(-170, 170)
+wall2x = 140
+wall2y = rand.randint(-140, 140)
+wall3x = 110
+wall3y = rand.randint(-140, 110)
+wall4x = 80
+wall4y = rand.randint(-100, 80)
+wall5x = 50
+wall5y = rand.randint(-80, 50)
+wall6x = 20
+wall6y = rand.randint(-50, 30)
+'''wall7x = rand.randint(-50, 30)
+wall7y = 5
+wall8x = rand.randint(-50, 30)
+wall8y = -25'''
+wall9x = -50
+wall9y = rand.randint(-20, 20)
+wall10x = -80
+wall10y = rand.randint(-50, 50)
+wall11x = -110
+wall11y = rand.randint(-80, 80)
+wall12x = -140
+wall12y = rand.randint(-110, 110)
+wall13x = -170
+wall13y = rand.randint(-140, 110)
+wall14x = -200
+wall14y = rand.randint(-170, 150)
+
+barrier2x = rand.randint(-170, 140)
+barrier2y = 155
+barrier3x = rand.randint(-140, 110)
+barrier3y = 125
+barrier4x = rand.randint(-100, 80)
+barrier4y = 95
+barrier5x = rand.randint(-70, 50)
+barrier5y = 65
+barrier6x = rand.randint(-50, 30)
+barrier6y = 35
+'''wall7x = rand.randint(-50, 30)
+wall7y = 5
+wall8x = rand.randint(-50, 30)
+wall8y = -25'''
+barrier9x = rand.randint(-20, 20)
+barrier9y = -50
+barrier10x = rand.randint(-50, 50)
+barrier10y = -80
+barrier11x = rand.randint(-80, 80)
+barrier11y = -110
+barrier12x = rand.randint(-110, 110)
+barrier12y = -140
+barrier13x = rand.randint(-140, 140)
+barrier13y = -170
+barrier14x = rand.randint(-170, 150)
+barrier14y = -200
+
+# Drawing the random barriers
+'''wall.penup()
+wall.goto(wall1x, wall1y)
+wall.pendown()
+wall.forward(30)'''
+wall.penup()
+
+wall.goto(barrier2x, barrier2y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier3x, barrier3y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier4x, barrier4y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier5x, barrier5y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier6x, barrier6y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+'''wall.goto(wall7x, wall7y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall8x, wall8y)
+wall.pendown()
+wall.forward(30)
+wall.penup()'''
+
+wall.goto(barrier9x, barrier9y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier10x, barrier10y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier11x, barrier11y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+
+wall.goto(barrier12x, barrier12y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier13x, barrier13y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(barrier14x, barrier14y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+# Drawing the walls
+wall.pencolor("black")
+
+wall.goto(wall1x, wall1y)
+wall.pendown()
+wall.right(90)
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall2x, wall2y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall3x, wall3y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall4x, wall4y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall5x, wall5y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall6x, wall6y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+'''wall.goto(wall7x, wall7y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall8x, wall8y)
+wall.pendown()
+wall.forward(30)
+wall.penup()'''
+
+wall.goto(wall9x, wall9y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall10x, wall10y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall11x, wall11y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+
+wall.goto(wall12x, wall12y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall13x, wall13y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall14x, wall14y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+# The doors
+
+door1x = 170
+door1y = rand.randint(-170, 170)
+door2x = 140
+door2y = rand.randint(-140, 140)
+door3x = 110
+door3y = rand.randint(-140, 110)
+door4x = 80
+door4y = rand.randint(-100, 80)
+door5x = 50
+door5y = rand.randint(-80, 50)
+door6x = 20
+door6y = rand.randint(-50, 30)
+'''wall7x = rand.randint(-50, 30)
+wall7y = 5
+wall8x = rand.randint(-50, 30)
+wall8y = -25'''
+door9x = -50
+door9y = rand.randint(-20, 20)
+door10x = -80
+door10y = rand.randint(-50, 50)
+door11x = -110
+door11y = rand.randint(-80, 80)
+door12x = -140
+door12y = rand.randint(-110, 110)
+door13x = -170
+door13y = rand.randint(-140, 110)
+door14x = -200
+door14y = rand.randint(-170, 150)
+
+# The other doors
+
+
+open2x = rand.randint(-170, 140)
+open2y = 155
+open3x = rand.randint(-140, 110)
+open3y = 125
+open4x = rand.randint(-110, 80)
+open4y = 95
+open5x = rand.randint(-80, 50)
+open5y = 65
+open6x = rand.randint(-50, 30)
+open6y = 35
+'''wall7x = rand.randint(-50, 30)
+wall7y = 5
+wall8x = rand.randint(-50, 30)
+wall8y = -25'''
+open9x = rand.randint(-20, 20)
+open9y = -50
+open10x = rand.randint(-50, 50)
+open10y = -80
+open11x = rand.randint(-80, 80)
+open11y = -110
+open12x = rand.randint(-110, 110)
+open12y = -140
+open13x = rand.randint(-140, 140)
+open13y = -170
+open14x = rand.randint(-170, 150)
+open14y = -200
+
+# Drawing the doors
+wall.pencolor("white")
+
+wall.goto(door1x, door1y)
+wall.pendown()
+wall.left(90)
+wall.forward(30)
+wall.penup()
+
+wall.goto(door2x, door2y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door3x, door3y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door4x, door4y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door5x, door5y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door6x, door6y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+'''wall.goto(wall7x, wall7y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall8x, wall8y)
+wall.pendown()
+wall.forward(30)
+wall.penup()'''
+
+wall.goto(door9x, door9y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door10x, door10y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door11x, door11y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+
+wall.goto(door12x, door12y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door13x, door13y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(door14x, door14y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+# The doors the other way
+wall.pencolor("white")
+'''wall.pendown()
+wall.left(90)
+wall.forward(30)
+wall.penup()'''
+
+wall.goto(open2x, open2y)
+wall.pendown()
+wall.left(90)
+wall.forward(30)
+wall.penup()
+
+wall.goto(open3x, open3y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(open4x, open4y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(open5x, open5y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(open6x, open6y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+'''wall.goto(wall7x, wall7y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(wall8x, wall8y)
+wall.pendown()
+wall.forward(30)
+wall.penup()'''
+
+wall.goto(open9x, open9y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(open10x, open10y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(open11x, open11y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+
+wall.goto(open12x, open12y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(open13x, open13y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.goto(open14x, open14y)
+wall.pendown()
+wall.forward(30)
+wall.penup()
+
+wall.hideturtle()
+
+########################### Maze Runner ##############
+'''
+distance = 5
+run.showturtle()
+run.turtlesize(3)
+run.penup()
+def forward():
+    run.forward(distance)
+def down():
+    run.back(distance)
+def left():
+    run.left(90)
+    run.forward(distance)
+    run.right(90)
+def right():
+    run.right(90)
+    run.forward(distance)
+    run.left(90)
+    
+wn.onkeypress(forward, "Up")
+wn.onkeypress(down, "Down")
+wn.onkeypress(left, "Left")
+wn.onkeypress(right, "Right")
+'''
+
+wn.listen()
+wn.mainloop()
